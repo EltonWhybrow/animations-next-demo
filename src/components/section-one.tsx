@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function SectionOne(props: any) {
   return (
@@ -29,7 +31,12 @@ export default function SectionOne(props: any) {
       <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
       <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
     </div>
-    <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
+    <motion.div 
+     initial={{ opacity: 0, y:100 }}
+     animate={{ opacity: 1, y:0, transition: {delay:.5} }}
+     exit={{ opacity: 0, y:100 }}
+     transition={{ duration: 0.4 }}
+    className="w-full md:w-4/12 px-4 mr-auto ml-auto">
       <div
         className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600"
       >
@@ -64,7 +71,7 @@ export default function SectionOne(props: any) {
           </p>
         </blockquote>
       </div>
-    </div>
+    </motion.div>
     </div>
   );
 }
