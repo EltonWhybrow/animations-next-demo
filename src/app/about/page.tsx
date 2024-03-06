@@ -1,6 +1,7 @@
 import TransitionLink from "@/components/TransitionLinks";
 import SectionOne from "@/components/section-one";
 
+
 export default function About() {
     return (
       <div className="flex flex-col h-screen items-center justify-center bg-slate-200 gap-10 routeContent">

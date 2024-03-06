@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function SectionOne(props: any) {
   return (
     <div className="flex flex-wrap items-center mt-32">
@@ -24,11 +26,8 @@ export default function SectionOne(props: any) {
         faster. You can change the text and images and you're good to
         go. Just make sure you enable them first via JavaScript.
       </p>
-      <a
-        href="https://www.creative-tim.com/framework/tailwind-starter-kit"
-        className="font-bold text-gray-800 mt-8"
-        >Check Tailwind Starter Kit!</a
-      >
+      <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
+      <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
     </div>
     <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
       <div
@@ -37,30 +36,33 @@ export default function SectionOne(props: any) {
         <img
           alt="..."
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-          className="w-full align-middle rounded-t-lg"
+          className="w-full align-middle rounded-t-lg z-0"
         />
-        {/* <blockquote className="relative p-8 mb-4">
+        <blockquote className="block relative p-8 bg-pink-600">
+          <span className="absolute -top-[40px] left-0 z-10 w-full h-40">
           <svg
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 583 95"
-            className="absolute left-0 w-full block"
-            style="height: 95px; top: -94px;"
+            className="absolute left-0 -top-[30px] w-full block"
+         
           >
             <polygon
               points="-30,95 583,95 583,65"
               className="text-pink-600 fill-current"
             ></polygon>
           </svg>
+          </span>
+          <div className="h-16 w-16 text-white p-3 bg-red-400 inline-flex items-center justify-center rounded-full shadow-lg mb-4">
+            <i className="fas fa-rocket text-xl"></i>
+          </div>
           <h4 className="text-xl font-bold text-white">
             Top Notch Services
           </h4>
           <p className="text-md font-light mt-2 text-white">
-            The Arctic Ocean freezes every winter and much of the
-            sea-ice then thaws every summer, and that process will
-            continue whatever happens.
+            Corporis reiciendis quod necessitatibus vel minus cupiditate recusandae debitis aliquam, suscipit beatae nesciunt deleniti obcaecati distinctio neque laboriosam officia perspiciatis. Nam, a!
           </p>
-        </blockquote> */}
+        </blockquote>
       </div>
     </div>
     </div>
