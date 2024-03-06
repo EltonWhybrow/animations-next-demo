@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Animate the page header separatly */
 .routeContent {
   view-transition-name: route-content;
@@ -19,31 +18,35 @@
 }
 
 /* ::view-transition-old(root) {
-  animation: slide-left 0.5s ease-in-out 1 forwards;
+  animation: slide-left 0.6s ease-in-out 1 forwards;
+}
+
+::view-transition-new(root) {
+  animation: slide-right 0.6s ease-in-out 1 forwards;
 } */
 
-/* ::view-transition-new(root) {
-  animation: slide-right 1s ease-in-out 1 forwards;
-} */
-::view-transition-new(route-content) {
-  animation: slide-right 1s ease-in-out 1 forwards;
+::view-transition-old(route-content) {
+  animation: slide-rigth 0.6s ease-in-out 1 forwards;
 }
-/* 
+::view-transition-new(route-content) {
+  animation: slide-left 0.6s ease-in-out 1 forwards;
+}
+
 ::view-transition-old(page-header) {
-  animation: hide 1s ease-in-out 1 forwards;
+  animation: hide .4s ease-in-out 1 forwards;
 }
 
 ::view-transition-new(page-header) {
-  animation: slide-right 2s ease-in-out 1 forwards;
+  animation: slide-right .4s ease-in-out 1 forwards;
 }
 
 ::view-transition-old(page-content) {
-  animation: fade-and-scale-out 1s ease-in-out 1 forwards;
+  animation: fade-and-scale-out .66s ease-in-out 1 forwards;
 }
 
 ::view-transition-new(page-content) {
-  animation: fade-and-scale-in 2.5s ease-in-out 1 forwards;
-} */
+  animation: fade-and-scale-in .6s ease-in-out 1 forwards;
+}
 
 /* First Animation */
 

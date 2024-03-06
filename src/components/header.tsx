@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import AnimatedLink from "./animatedLink";
+import TransitionLink from "./TransitionLinks";
 
 export default function Header() {
   return (
@@ -9,6 +10,10 @@ export default function Header() {
         <AnimatedLink href="/">Home</AnimatedLink>
         <AnimatedLink href="/about">About</AnimatedLink>
         <AnimatedLink href="/contact">Contact</AnimatedLink>
+
+      {/* <TransitionLink href="/" label="Home ->" />
+      <TransitionLink href="/about" label="About ->" />
+      <TransitionLink href="/contact" label="Contact ->" /> */}
       </div>
     </div>
   );

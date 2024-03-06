@@ -8,7 +8,7 @@
         const extendedDocument = document as ExtendedDocument;
         let status = "Opss, Your browser doesn't support View Transitions API";
         if (extendedDocument?.startViewTransition) {
-          status = "Yess, Your browser support View Transitions API";
+          status = "Yee!!, Your browser support View Transitions API";
         }
         return status;
       };
