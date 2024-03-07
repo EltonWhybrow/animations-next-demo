@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 
 export default function SectionOne(props: any) {
   return (
-    <div className="flex flex-wrap items-center mt-32">
-    <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+    <>
+    <div className="flex flex-wrap mt-20">
+    <div className="w-full md:w-6/12 px-4 mr-auto ml-auto">
     <motion.div
          whileHover={{ scale: 1.2 }}
          whileTap={{ scale: 1.1 }}
@@ -13,8 +14,6 @@ export default function SectionOne(props: any) {
          dragConstraints={{ left: -100, right: 100 }}
         className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
       >
-        
-        <i className="fas fa-user-friends text-xl"></i>
        {props.title}
       </motion.div>
       <h3 className="text-3xl mb-2 font-semibold leading-normal">
@@ -78,6 +77,9 @@ export default function SectionOne(props: any) {
         </blockquote>
       </div>
     </motion.div>
+  
     </div>
+   
+      </>
   );
 }
