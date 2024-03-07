@@ -2,46 +2,12 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function SectionOne(props: any) {
+export default function SectionTwo(props: any) {
   return (
     <div className="flex flex-wrap items-center mt-32">
-    <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-    <motion.div
-         whileHover={{ scale: 1.2 }}
-         whileTap={{ scale: 1.1 }}
-         drag="x"
-         dragConstraints={{ left: -100, right: 100 }}
-        className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
-      >
-        
-        <i className="fas fa-user-friends text-xl"></i>
-       {props.title}
-      </motion.div>
-      <h3 className="text-3xl mb-2 font-semibold leading-normal">
-        Working with gestures
-      </h3>
-      <p
-        className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-      >
-        Don't let your uses guess by attaching tooltips and popoves to
-        any element. Just make sure you enable them first via
-        JavaScript.
-      </p>
-      <p
-        className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-      >
-        The kit comes with three pre-built pages to help you get started
-        faster. You can change the text and images and you're good to
-        go. Just make sure you enable them first via JavaScript.
-      </p>
-      <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
-      <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
-    </div>
-    <motion.div 
-     initial={{ opacity: 0, y:100 }}
-     animate={{ opacity: 1, y:0, transition: {delay:.5} }}
-     exit={{ opacity: 0, y:100 }}
-     transition={{ duration: 0.4 }}
+     <motion.div
+  initial={{ opacity: 0} }
+  whileInView={{ opacity: 1, y:0, transition: {delay:.4} }}
     className="w-full md:w-4/12 px-4 mr-auto ml-auto">
       <div
         className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600"
@@ -78,6 +44,40 @@ export default function SectionOne(props: any) {
         </blockquote>
       </div>
     </motion.div>
+
+    <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
+    <motion.div
+          whileHover={{ scale: 1.2 }}
+          // whileTap={{ scale: 1.1 }}
+          // drag="x"
+          // dragConstraints={{ left: -100, right: 100 }}
+        className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
+      >
+        
+        <i className="fas fa-user-friends text-xl"></i>
+       {props.title}
+      </motion.div>
+      <h3 className="text-3xl mb-2 font-semibold leading-normal">
+        Working with us is a pleasure
+      </h3>
+      <p
+        className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+      >
+        Don't let your uses guess by attaching tooltips and popoves to
+        any element. Just make sure you enable them first via
+        JavaScript.
+      </p>
+      <p
+        className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
+      >
+        The kit comes with three pre-built pages to help you get started
+        faster. You can change the text and images and you're good to
+        go. Just make sure you enable them first via JavaScript.
+      </p>
+      <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
+      <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
+    </div>
+    
     </div>
   );
 }

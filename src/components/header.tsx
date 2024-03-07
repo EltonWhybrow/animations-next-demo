@@ -8,6 +8,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
+  { href: "/about", label: "Really long link name to home" },
 ];
 
 export default function Header() {
