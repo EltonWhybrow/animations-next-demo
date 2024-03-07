@@ -3,19 +3,40 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function SectionOne(props: any) {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+        staggerDirection: -1
+      }
+    }
+  }
+  
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  }
   return (
     <>
     <div className="flex flex-wrap mt-20">
     <div className="w-full md:w-6/12 px-4 mr-auto ml-auto">
-    <motion.div
-         whileHover={{ scale: 1.2 }}
-         whileTap={{ scale: 1.1 }}
-         drag="x"
-         dragConstraints={{ left: -100, right: 100 }}
-        className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
-      >
-       {props.title}
-      </motion.div>
+    <motion.ul
+      variants={container}
+      initial="hidden"
+      animate="show"
+      className="flex mb-5">
+        <motion.li variants={item}>
+      <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
+        </motion.li>
+        <motion.li variants={item}>
+      <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
+        </motion.li>
+        <motion.li variants={item}>
+      <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/">HOME</Link>
+        </motion.li>
+      </motion.ul>
       <h3 className="text-3xl mb-2 font-semibold leading-normal">
         Working with gestures
       </h3>
@@ -33,14 +54,15 @@ export default function SectionOne(props: any) {
         faster. You can change the text and images and you're good to
         go. Just make sure you enable them first via JavaScript.
       </p>
-      <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
-      <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
+    
+  
     </div>
+
     <motion.div 
      initial={{ opacity: 0, y:100 }}
      animate={{ opacity: 1, y:0, transition: {delay:.5} }}
      exit={{ opacity: 0, y:100 }}
-     transition={{ duration: 0.4 }}
+     transition={{ duration: .6 }}
     className="w-full md:w-4/12 px-4 mr-auto ml-auto">
       <div
         className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600"

@@ -4,8 +4,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
 export default function HeroSection(props: any) {
-  let {scrollYProgress} = useScroll();
-let y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  let {scrollY} = useScroll();
+let y = useTransform(scrollY, [0, 1000], ["0%", "100%"]);
 
   return (
     <>
@@ -36,8 +36,13 @@ let y = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
         faster. You can change the text and images and you're good to
         go. Just make sure you enable them first via JavaScript.
       </p>
+      <motion.div
+       initial={{ opacity: 0 ,x: -250} }
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ type: "spring", stiffness: 100 }}>
       <Link className="p-3 bg-slate-300 text-gray-700 rounded" href="/">HOME</Link>
       <Link className="p-3 bg-slate-300 text-gray-700 rounded ml-2" href="/contact">CONTACT</Link>
+      </motion.div>
      
     </div>
    
