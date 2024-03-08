@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion"
+
 import { usePathname } from "next/navigation";
+import { MotionSpan } from "./MotionDiv";
 
 const links = [
   { href: "/", label: "Home" },
@@ -21,7 +22,7 @@ export default function Header() {
         {links.map((link) => (
           <li key={link.href}>  
           <Link href={link.href} className="relative p-2">
-            {link.href === pathName && (<motion.span layoutId="underline" className="absolute left-0 top-full block h-[2px] w-full bg-white"></motion.span>)}{link.label}
+            {link.href === pathName && (<MotionSpan layoutId="underline" className="absolute left-0 top-full block h-[2px] w-full bg-white"></MotionSpan>)}{link.label}
             </Link>
             </li>
         ))}

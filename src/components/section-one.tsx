@@ -1,6 +1,5 @@
-"use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { MotionDiv, MotionLi, MotionUl } from "./MotionDiv";
 
 export default function SectionOne(props: any) {
   const container = {
@@ -22,21 +21,21 @@ export default function SectionOne(props: any) {
     <>
     <div className="flex flex-wrap mt-20">
     <div className="w-full md:w-6/12 px-4 mr-auto ml-auto">
-    <motion.ul
+    <MotionUl
       variants={container}
       initial="hidden"
       animate="show"
       className="flex mb-5">
-        <motion.li variants={item}>
+        <MotionLi variants={item}>
       <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
-        </motion.li>
-        <motion.li variants={item}>
+        </MotionLi>
+        <MotionLi variants={item}>
       <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
-        </motion.li>
-        <motion.li variants={item}>
+        </MotionLi>
+        <MotionLi variants={item}>
       <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/">HOME</Link>
-        </motion.li>
-      </motion.ul>
+        </MotionLi>
+      </MotionUl>
       <h3 className="text-3xl mb-2 font-semibold leading-normal">
         Working with gestures
       </h3>
@@ -58,7 +57,7 @@ export default function SectionOne(props: any) {
   
     </div>
 
-    <motion.div 
+    <MotionDiv 
      initial={{ opacity: 0, y:100 }}
      animate={{ opacity: 1, y:0, transition: {delay:.5} }}
      exit={{ opacity: 0, y:100 }}
@@ -98,7 +97,7 @@ export default function SectionOne(props: any) {
           </p>
         </blockquote>
       </div>
-    </motion.div>
+    </MotionDiv>
   
     </div>
    
