@@ -1,4 +1,4 @@
-"use client";
+
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -25,7 +25,7 @@ let y = useTransform(scrollY, [0, 1000], ["0%", "100%"]);
       <p
         className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-100"
       >
-        Don't let your uses guess by attaching tooltips and popoves to
+        Don&apos;t let your USERS guess by attaching tooltips and popoves to
         any element. Just make sure you enable them first via
         JavaScript.
       </p>
@@ -33,7 +33,7 @@ let y = useTransform(scrollY, [0, 1000], ["0%", "100%"]);
         className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-100"
       >
         The kit comes with three pre-built pages to help you get started
-        faster. You can change the text and images and you're good to
+        faster. You can change the text and images and you&apos;re good to
         go. Just make sure you enable them first via JavaScript.
       </p>
       <motion.div
