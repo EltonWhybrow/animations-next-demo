@@ -1,6 +1,6 @@
-"use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { MotionDiv } from "./MotionDiv";
+
 
 export default function SectionThree(props: any) {
   return (
@@ -8,7 +8,7 @@ export default function SectionThree(props: any) {
      
 
     <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-    <motion.div
+    <MotionDiv
           whileHover={{ scale: 1.2 }}
           // whileTap={{ scale: 1.1 }}
           // drag="x"
@@ -18,7 +18,7 @@ export default function SectionThree(props: any) {
         
         <i className="fas fa-user-friends text-xl"></i>
        {props.title}
-      </motion.div>
+      </MotionDiv>
       <h3 className="text-3xl mb-2 font-semibold leading-normal">
         Working with us is a pleasure
       </h3>
@@ -39,7 +39,7 @@ export default function SectionThree(props: any) {
       <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
       <Link className="p-3 bg-slate-700 text-white rounded ml-2" href="/contact">CONTACT</Link>
     </div>
-    <motion.div
+    <MotionDiv
   initial={{ opacity: 0 ,x: 250} }
   whileInView={{ opacity: 1, transition: {delay:.2, duration: .5}, x:0}}
     className="w-full md:w-5/12 px-4 mr-auto ml-auto">
@@ -77,7 +77,7 @@ export default function SectionThree(props: any) {
           </p>
         </blockquote>
       </div>
-    </motion.div>
+    </MotionDiv>
     
     </div>
   );
