@@ -15,7 +15,7 @@ export default function SectionOne(props: any) {
       <p
         className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
       >
-        Don't let your uses guess by attaching tooltips and popoves to
+        Don&apos;t let your uses guess by attaching tooltips and popoves to
         any element. Just make sure you enable them first via
         JavaScript.
       </p>
