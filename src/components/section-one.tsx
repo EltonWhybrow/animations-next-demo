@@ -23,7 +23,7 @@ export default function SectionOne(props: any) {
         className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
       >
         The kit comes with three pre-built pages to help you get started
-        faster. You can change the text and images and you're good to
+        faster. You can change the text and images and you&apos;re good to
         go. Just make sure you enable them first via JavaScript.
       </p>
       <Link className="p-3 bg-slate-700 text-white rounded" href="/">HOME</Link>
