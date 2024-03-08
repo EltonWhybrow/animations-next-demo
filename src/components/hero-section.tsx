@@ -1,4 +1,4 @@
-
+'use client';
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
