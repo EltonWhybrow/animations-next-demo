@@ -1,0 +1,5 @@
+[Settings]
+ID = "71d4d4f8-866f-4c2b-ab9c-3f08c111cfeb"
+
+[context.production]
+    command = "mv robots-production.txt robots.txt"
